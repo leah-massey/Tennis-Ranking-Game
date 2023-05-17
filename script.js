@@ -51,3 +51,7 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.score').textContent = score;
   document.querySelector('.guess').value = '';
 });
+
+document.querySelector('.guess').addEventListener('click', function () {
+  document.querySelector('.guess').value = '';
+});
