@@ -63,7 +63,7 @@ h1 {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 75%);
 }
 
 .between {
@@ -96,10 +96,14 @@ h1 {
 }
 
 .message {
-  margin-bottom: 8rem;
+  margin-top: 5rem;
   height: 3rem;
 }
 
 .label-score {
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.player {
+  width: 15rem;
 }
