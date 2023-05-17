@@ -11,21 +11,41 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess || guess > 20 || guess < 1) {
     document.querySelector('.message').textContent =
       'You must enter a number between 1 and 20';
+
     // guess too high
   } else if (guess > secretNumber) {
-    document.querySelector('.message').textContent =
-      "They're better than that!";
-    score--;
-    document.querySelector('.score').textContent = score;
+    if (score === 1) {
+      document.querySelector('.message').textContent = 'Sorry, game over';
+      document.querySelector('.score').textContent = 0;
+    } else {
+      score--;
+      document.querySelector('.message').textContent =
+        'You underestimate them, try again!';
+      document.querySelector('.score').textContent = score;
+    }
 
     // guess too low
   } else if (guess < secretNumber) {
-    document.querySelector('.message').textContent =
-      "Mmm... they're not quite that good";
-    score--;
-    document.querySelector('.score').textContent = score;
+    if (score === 1) {
+      document.querySelector('.message').textContent = 'Sorry, game over';
+      document.querySelector('.score').textContent = 0;
+    } else {
+      score--;
+      document.querySelector('.message').textContent =
+        "Mmm... they're not quite that good";
+      document.querySelector('.score').textContent = score;
+    }
+
     // guess correct
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'Bang on!';
+    if (score > highScore) {
+      highScore = score;
+    }
+    document.querySelector('.highscore').textContent = highScore;
   }
+});
+
+document.querySelector('.again').addEventListener('click', function () {
+  document.querySelector('.score').textContent = 20;
 });
