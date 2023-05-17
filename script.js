@@ -1,6 +1,7 @@
 'use strict';
 
-const secretNumber = 12;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+console.log(secretNumber);
 let score = 20;
 let highScore = 0;
 
@@ -46,12 +47,16 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
+// 'play again' button
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   document.querySelector('.score').textContent = score;
   document.querySelector('.guess').value = '';
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  console.log(secretNumber);
 });
 
+//  input box reset
 document.querySelector('.guess').addEventListener('click', function () {
   document.querySelector('.guess').value = '';
 });
