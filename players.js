@@ -1,5 +1,3 @@
-'use strict';
-
 const players = [
   {
     name: ['Aryna', 'Sabalenka'],
@@ -18,7 +16,6 @@ const players = [
 
   {
     name: ['Caroline', 'Garcia'],
-    ranking: 4,
   },
 
   {
@@ -102,4 +99,4 @@ const players = [
   },
 ];
 
-module.exports = players;
+module.exports.myObj = 'players';

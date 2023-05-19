@@ -43,7 +43,7 @@ main {
 
 /* elements style */
 
-h1 {
+h1.main {
   font-size: 4rem;
   text-align: center;
   position: absolute;
@@ -106,4 +106,35 @@ h1 {
 
 .player {
   width: 15rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(249, 248, 247);
+  color: black;
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: black;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.show-modal {
+  cursor: pointer;
 }

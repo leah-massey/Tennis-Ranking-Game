@@ -9,9 +9,20 @@
   </head>
   <body>
     <header>
-      <h1>Guess their Ranking!</h1>
+      <h1 class="main">Guess their Ranking!</h1>
       <p class="between">(Between 1 and 20)</p>
       <button class="btn again">Play again!</button>
+      <button class="btn show-modal how-to">How to play</button>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>How to play 🎾</h1>
+        <p>
+          These are the instructions on how to play. Follow them very closely!
+        </p>
+      </div>
+      <div class="overlay hidden"></div>
+
       <div class="number">
         <img
           class="player"
