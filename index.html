@@ -12,7 +12,7 @@
       <h1 class="main">Guess their Ranking!</h1>
       <p class="between">(Between 1 and 20)</p>
       <button class="btn again">Play again!</button>
-      <button class="btn show-modal how-to">How to play</button>
+      <button class="btn open-modal how-to">How to play</button>
 
       <div class="modal hidden">
         <button class="close-modal">&times;</button>
@@ -21,7 +21,6 @@
           These are the instructions on how to play. Follow them very closely!
         </p>
       </div>
-      <div class="overlay hidden"></div>
 
       <div class="number">
         <img
@@ -32,6 +31,7 @@
       </div>
     </header>
     <main>
+      <div class="overlay hidden"></div>
       <section class="left">
         <input type="number" class="guess" />
         <button class="btn check">Check!</button>

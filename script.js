@@ -57,12 +57,23 @@ document.querySelector('.guess').addEventListener('click', function () {
 
 /////////// LOGIC FOR POP-UP 'HOW TO PLAY' BUTTON
 
-document.querySelector('.show-modal').addEventListener('click', function () {
-  document.querySelector('.modal').classList.remove('hidden');
-  document.querySelector('.overlay').classList.remove('hidden');
-});
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnClosemodal = document.querySelector('.close-modal');
+const btnOpenModal = document.querySelector('.open-modal');
 
-document.querySelector('.close-modal').addEventListener('click', function () {
-  document.querySelector('.modal').classList.add('hidden');
-  document.querySelector('.overlay').classList.add('hidden');
-});
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+const openModal = function () {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+btnOpenModal.addEventListener('click', openModal);
+
+btnClosemodal.addEventListener('click', closeModal);
+
+overlay.addEventListener('click', closeModal);
