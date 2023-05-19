@@ -1,9 +1,5 @@
 'use strict';
 
-const players = require('./players');
-
-console.log(players);
-
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 console.log(secretNumber);
 let score = 20;
@@ -11,6 +7,8 @@ let highScore = 0;
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
+
+/////////// LOGIC FOR PLAYING GAME
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -55,4 +53,11 @@ document.querySelector('.again').addEventListener('click', function () {
 //  input box reset
 document.querySelector('.guess').addEventListener('click', function () {
   document.querySelector('.guess').value = '';
+});
+
+/////////// LOGIC FOR POP-UP 'HOW TO PLAY' BUTTON
+
+document.querySelector('.show-modal').addEventListener('click', function () {
+  document.querySelector('.modal').classList.remove('hidden');
+  document.querySelector('.overlay').classList.remove('hidden');
 });
