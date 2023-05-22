@@ -51,12 +51,15 @@ document.querySelector('.check').addEventListener('click', function () {
     }
     // guess correct
   } else if (guess === secretNumber) {
-    displayMessage('Bang on!');
     numbersPlayed.push(secretNumber);
-    console.log(numbersPlayed);
-    if (score > highScore) {
-      highScore = score;
+    if (numbersPlayed.length === 4) {
+      displayMessage('Bang on!, end of Game, check your final score!');
+    } else {
+      displayMessage('Bang on! Press next to get next player');
     }
+
+    console.log(numbersPlayed);
+    highScore += score;
     document.querySelector('.highscore').textContent = highScore;
   }
 });
