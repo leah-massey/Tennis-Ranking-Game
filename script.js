@@ -1,12 +1,25 @@
 'use strict';
 
 const player = document.querySelector('.player');
+let numbersPlayed = [];
 
 //generate random number
-let secretNumber = Math.trunc(Math.random() * 4) + 1;
+let generateSecretNumber = function () {
+  let newNumber = Math.trunc(Math.random() * 4) + 1;
+  //add while loop so that random number is not repeated in the game
+  while (numbersPlayed.includes(newNumber)) {
+    newNumber = Math.trunc(Math.random() * 4) + 1;
+  }
+  return newNumber;
+};
+
+let secretNumber = generateSecretNumber();
+
+console.log(`secretNumber: ${secretNumber}`);
 //connect random number to player image
 player.src = `player-${secretNumber}.png`;
 
+//setting the scores at start of game
 let score = 20;
 let highScore = 0;
 const displayMessage = function (message) {
@@ -39,6 +52,8 @@ document.querySelector('.check').addEventListener('click', function () {
     // guess correct
   } else if (guess === secretNumber) {
     displayMessage('Bang on!');
+    numbersPlayed.push(secretNumber);
+    console.log(numbersPlayed);
     if (score > highScore) {
       highScore = score;
     }
@@ -51,8 +66,10 @@ document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   document.querySelector('.score').textContent = score;
   document.querySelector('.guess').value = '';
-  secretNumber = Math.trunc(Math.random() * 20) + 1;
-  console.log(secretNumber);
+  secretNumber = generateSecretNumber();
+  player.src = `player-${secretNumber}.png`;
+  console.log(`numbers played: ${numbersPlayed}`);
+  console.log(`new secretNumber: ${secretNumber}`);
 });
 
 //  input box reset
