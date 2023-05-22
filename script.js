@@ -5,10 +5,10 @@ let numbersPlayed = [];
 
 //generate random number
 let generateSecretNumber = function () {
-  let newNumber = Math.trunc(Math.random() * 4) + 1;
+  let newNumber = Math.trunc(Math.random() * 20) + 1;
   //add while loop so that random number is not repeated in the game
   while (numbersPlayed.includes(newNumber)) {
-    newNumber = Math.trunc(Math.random() * 4) + 1;
+    newNumber = Math.trunc(Math.random() * 20) + 1;
   }
   return newNumber;
 };
@@ -52,7 +52,7 @@ document.querySelector('.check').addEventListener('click', function () {
     // guess correct
   } else if (guess === secretNumber) {
     numbersPlayed.push(secretNumber);
-    if (numbersPlayed.length === 4) {
+    if (numbersPlayed.length === 20) {
       displayMessage('Bang on!, end of Game, check your final score!');
     } else {
       displayMessage('Bang on! Press next to get next player');
