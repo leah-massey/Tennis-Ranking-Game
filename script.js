@@ -1,7 +1,12 @@
 'use strict';
 
-let secretNumber = Math.trunc(Math.random() * 20) + 1;
-console.log(secretNumber);
+const player = document.querySelector('.player');
+
+//generate random number
+let secretNumber = Math.trunc(Math.random() * 4) + 1;
+//connect random number to player image
+player.src = `player-${secretNumber}.png`;
+
 let score = 20;
 let highScore = 0;
 const displayMessage = function (message) {
