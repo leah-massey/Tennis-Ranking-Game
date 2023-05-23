@@ -59,7 +59,7 @@ document.querySelector('.check').addEventListener('click', function () {
         playing = false;
         displayMessage('Bang on!, end of Game, check your final score!');
       } else {
-        displayMessage('Bang on! Press next to get next player');
+        displayMessage('Bang on! Try the next one 🤞🏻');
         score = 20;
         document.querySelector('.score').textContent = score;
         document.querySelector('.guess').value = '';
@@ -102,6 +102,7 @@ document.querySelector('.reset').addEventListener('click', function () {
   document.querySelector('.score').textContent = score;
   highScore = 0;
   document.querySelector('.highscore').textContent = highScore;
+  displayMessage('Start guessing...');
 });
 
 /////////// LOGIC FOR POP-UP 'HOW TO PLAY' BUTTON

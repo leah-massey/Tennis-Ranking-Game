@@ -36,21 +36,6 @@ main {
   justify-content: space-around;
 }
 
-.left {
-  width: 52rem;
-  display: absolute;
-  flex-direction: column;
-  align-items: center;
-}
-
-.right {
-  left: 10rem;
-  width: 52rem;
-  display: absolute;
-  font-size: 2rem;
-  flex-direction: column;
-}
-
 h1.main {
   text-align: center;
   font-family: "Raleway", sans-serif;
@@ -106,57 +91,67 @@ h1.main {
 
 .guess {
   background: none;
-  display: none;
+  justify-content: center;
+  align-items: center;
+  left: 90px;
   border: 4px solid #eee;
-  color: inherit;
   font-size: 5rem;
   padding: 2.5rem;
   width: 25rem;
   text-align: center;
-  display: block;
   margin-bottom: 3rem;
   border-radius: 6px;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 90px;
 }
 
 .btn:hover {
   background-color: #ccc;
 }
 
+.left {
+  left: 10rem;
+  width: 52rem;
+  height: 5rem;
+  display: absolute;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  left: 10rem;
+  width: 52rem;
+  display: absolute;
+  font-size: 2rem;
+  flex-direction: column;
+}
+
+.left-box {
+  width: 30rem;
+  height: 30rem;
+  position: relative;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #666;
+  border: 2px solid #666;
+}
+
 .message {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 20px;
-  padding-top: 20rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
 .label-score {
   margin-top: 1rem;
-}
-
-.table {
-  border-spacing: 0;
-  border-collapse: separate;
-  border-radius: 10px;
-  background-color: #fff;
-  color: #666;
-  border: 1px solid #666;
-}
-
-.guess-table {
-  width: 30%;
-  height: 10%;
-}
-
-.score-table {
-  width: 15%;
-  position: absolute;
-  top: 50rem;
-}
-
-td {
-  border: 1px solid #666;
-  padding: 8px;
 }
 
 .hidden {
