@@ -9,9 +9,12 @@
   </head>
   <body>
     <header>
+      <!-- page heading -->
       <h1 class="main">Guess their Ranking!</h1>
+      <!-- subheading -->
       <p class="between">(Between 1 and 20)</p>
       <button class="btn btn--stripe open-modal how-to">How to play</button>
+      <button class="btn btn--stripe reset">Start again</button>
       <!-- how to play popup -->
       <div class="modal hidden">
         <button class="close-modal">&times;</button>
@@ -21,11 +24,13 @@
           Max score is 400. Guess the players rank.
         </p>
       </div>
+
       <!-- player photo graphic -->
-      <div class="number">
+      <div class="player-box">
         <img class="player-photo" src="" alt="" />
       </div>
     </header>
+
     <main>
       <div class="next-player">
         <button class="btn again btn--stripe">Next player!</button>
@@ -39,18 +44,30 @@
       <!-- popup overlay -->
       <div class="overlay hidden"></div>
 
+      <!-- left side column -->
       <section class="left">
+        <p class="message">Start Guessing...</p>
         <!-- guess input box -->
         <input type="number" class="guess" />
         <button class="btn check btn--stripe">Check!</button>
       </section>
-      <section class="right">
-        <p class="message">Start Guessing...</p>
 
-        <p class="label-score">Score: <span class="score">20</span></p>
-        <p class="label-highscore">
+      <!-- right side column -->
+      <section class="right">
+        <table class="score-table">
+          <tr>
+            <td>Score</td>
+            <td class="score">20</td>
+          </tr>
+          <tr>
+            <td class="label-highscore">HighScore</td>
+            <td class="highscore">0</td>
+          </tr>
+        </table>
+        <!-- <p class="label-score">Score: <span class="score">20</span></p> -->
+        <!-- <p class="label-highscore">
           Highscore: <span class="highscore">0</span>
-        </p>
+        </p> -->
       </section>
     </main>
     <script src="script.js"></script>
