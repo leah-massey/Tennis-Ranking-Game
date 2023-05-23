@@ -1,6 +1,6 @@
 'use strict';
 
-const player = document.querySelector('.player');
+const player = document.querySelector('.player-photo');
 let numbersPlayed = [];
 let playing = true;
 

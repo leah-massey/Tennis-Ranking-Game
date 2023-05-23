@@ -11,9 +11,8 @@
     <header>
       <h1 class="main">Guess their Ranking!</h1>
       <p class="between">(Between 1 and 20)</p>
-      <button class="btn again">Next player!</button>
       <button class="btn open-modal how-to">How to play</button>
-
+      <!-- how to play popup -->
       <div class="modal hidden">
         <button class="close-modal">&times;</button>
         <h1>How to play 🎾</h1>
@@ -22,19 +21,32 @@
           Max score is 400. Guess the players rank.
         </p>
       </div>
-
+      <!-- player photo graphic -->
       <div class="number">
-        <img class="player" src="" alt="" />
+        <img class="player-photo" src="" alt="" />
+      </div>
+      <div class="next-player">
+        <button class="btn again">Next player!</button>
       </div>
     </header>
     <main>
+      <!-- end of game popup -->
+      <div class="end-game hidden">
+        <button class="close-modal">&times;</button>
+        <h1>End of Game</h1>
+        <p>Well done, you scored.</p>
+      </div>
+      <!-- popup overlay -->
       <div class="overlay hidden"></div>
+
       <section class="left">
+        <!-- guess input box -->
         <input type="number" class="guess" />
         <button class="btn check">Check!</button>
       </section>
       <section class="right">
         <p class="message">Start Guessing...</p>
+
         <p class="label-score">Score: <span class="score">20</span></p>
         <p class="label-highscore">
           Highscore: <span class="highscore">0</span>
