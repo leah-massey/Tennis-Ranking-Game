@@ -22,7 +22,7 @@ player.src = `player-${secretNumber}.png`;
 
 //setting the scores at start of game
 let score = 20;
-let highScore = 0; //***** do we need this? *****
+let highScore = 0;
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
@@ -88,6 +88,20 @@ document.querySelector('.again').addEventListener('click', function () {
 //  input box reset by clicking on it
 document.querySelector('.guess').addEventListener('click', function () {
   document.querySelector('.guess').value = '';
+});
+
+//start again button
+document.querySelector('.reset').addEventListener('click', function () {
+  numbersPlayed = [];
+  playing = true;
+  secretNumber = generateSecretNumber();
+  player.src = `player-${secretNumber}.png`;
+  console.log(`numbers played: ${numbersPlayed}`);
+  console.log(`new secretNumber: ${secretNumber}`);
+  score = 20;
+  document.querySelector('.score').textContent = score;
+  highScore = 0;
+  document.querySelector('.highscore').textContent = highScore;
 });
 
 /////////// LOGIC FOR POP-UP 'HOW TO PLAY' BUTTON
