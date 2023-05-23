@@ -2,6 +2,7 @@
 
 const player = document.querySelector('.player');
 let numbersPlayed = [];
+let playing = true;
 
 //generate random number
 let generateSecretNumber = function () {
@@ -29,50 +30,52 @@ const displayMessage = function (message) {
 /////////// LOGIC FOR PLAYING GAME
 
 document.querySelector('.check').addEventListener('click', function () {
-  const guess = Number(document.querySelector('.guess').value);
-  console.log(guess, typeof guess);
-  // guess not valid
-  if (!guess || guess > 20 || guess < 1) {
-    displayMessage('You must enter a number between 1 and 20');
-
-    // guess not correct
-  } else if (guess !== secretNumber) {
-    if (score > 1) {
-      displayMessage(
-        guess > secretNumber
-          ? 'You underestimate them, try again!'
-          : "Mmm... they're not quite that good"
-      );
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      displayMessage('Sorry, game over');
-      document.querySelector('.score').textContent = 0;
+  if (playing) {
+    const guess = Number(document.querySelector('.guess').value);
+    // guess not valid
+    if (!guess || guess > 20 || guess < 1) {
+      displayMessage('You must enter a number between 1 and 20');
+      // if guess not correct
+    } else if (guess !== secretNumber) {
+      if (score > 1) {
+        displayMessage(
+          guess > secretNumber
+            ? 'You underestimate them, try again!'
+            : "Mmm... they're not quite that good"
+        );
+        score--;
+        document.querySelector('.score').textContent = score;
+      } else {
+        displayMessage('Sorry, game over');
+        document.querySelector('.score').textContent = 0;
+      }
+      // if guess correct
+    } else if (guess === secretNumber) {
+      numbersPlayed.push(secretNumber);
+      if (numbersPlayed.length === 20) {
+        playing = false;
+        displayMessage('Bang on!, end of Game, check your final score!');
+      } else {
+        displayMessage('Bang on! Press next to get next player');
+      }
+      console.log(numbersPlayed);
+      highScore += score;
+      document.querySelector('.highscore').textContent = highScore;
     }
-    // guess correct
-  } else if (guess === secretNumber) {
-    numbersPlayed.push(secretNumber);
-    if (numbersPlayed.length === 20) {
-      displayMessage('Bang on!, end of Game, check your final score!');
-    } else {
-      displayMessage('Bang on! Press next to get next player');
-    }
-
-    console.log(numbersPlayed);
-    highScore += score;
-    document.querySelector('.highscore').textContent = highScore;
   }
 });
 
 // 'play again' button
 document.querySelector('.again').addEventListener('click', function () {
-  score = 20;
-  document.querySelector('.score').textContent = score;
-  document.querySelector('.guess').value = '';
-  secretNumber = generateSecretNumber();
-  player.src = `player-${secretNumber}.png`;
-  console.log(`numbers played: ${numbersPlayed}`);
-  console.log(`new secretNumber: ${secretNumber}`);
+  if (playing) {
+    score = 20;
+    document.querySelector('.score').textContent = score;
+    document.querySelector('.guess').value = '';
+    secretNumber = generateSecretNumber();
+    player.src = `player-${secretNumber}.png`;
+    console.log(`numbers played: ${numbersPlayed}`);
+    console.log(`new secretNumber: ${secretNumber}`);
+  }
 });
 
 //  input box reset
