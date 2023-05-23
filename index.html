@@ -15,6 +15,7 @@
       <p class="between">(Between 1 and 20)</p>
       <button class="btn btn--stripe open-modal how-to">How to play</button>
       <button class="btn btn--stripe reset">Start again</button>
+      <!-- <button class="btn btn--stripe reset">ATP players</button> -->
       <!-- how to play popup -->
       <div class="modal hidden">
         <button class="close-modal">&times;</button>
@@ -33,7 +34,7 @@
 
     <main>
       <div class="next-player">
-        <button class="btn again btn--stripe">Next player!</button>
+        <button class="btn again btn--stripe">Skip Player</button>
       </div>
       <!-- end of game popup -->
       <div class="end-game hidden">
@@ -46,17 +47,27 @@
 
       <!-- left side column -->
       <section class="left">
-        <p class="message">Start Guessing...</p>
+        <table class="table guess-table">
+          <tr>
+            <td class="message">Start Guessing...</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="number" class="guess" />
+            </td>
+          </tr>
+        </table>
+        <!-- <p class="message">Start Guessing...</p> -->
         <!-- guess input box -->
-        <input type="number" class="guess" />
+        <!-- <input type="number" class="guess" /> -->
         <button class="btn check btn--stripe">Check!</button>
       </section>
 
       <!-- right side column -->
       <section class="right">
-        <table class="score-table">
+        <table class="table score-table">
           <tr>
-            <td>Score</td>
+            <td>Attempts Left</td>
             <td class="score">20</td>
           </tr>
           <tr>

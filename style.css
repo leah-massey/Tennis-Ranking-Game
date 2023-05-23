@@ -115,6 +115,7 @@ h1.main {
   text-align: center;
   display: block;
   margin-bottom: 3rem;
+  border-radius: 6px;
 }
 
 .btn:hover {
@@ -133,18 +134,23 @@ h1.main {
   margin-top: 1rem;
 }
 
-.score-table {
-  width: 15%;
+.table {
+  border-collapse: collapse;
   border-radius: 6px;
   background-color: #fff;
   color: #666;
   border: 2px solid #666;
+}
+
+.score-table {
+  width: 15%;
   position: absolute;
   top: 50rem;
 }
 
 td {
-  border: 2px solid #666;
+  border: 1px solid #666;
+  padding: 8px;
 }
 
 .hidden {

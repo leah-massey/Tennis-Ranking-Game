@@ -22,7 +22,7 @@ player.src = `player-${secretNumber}.png`;
 
 //setting the scores at start of game
 let score = 20;
-let highScore = 0;
+let highScore = 0; //***** do we need this? *****
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
@@ -52,20 +52,27 @@ document.querySelector('.check').addEventListener('click', function () {
       // if guess correct
     } else if (guess === secretNumber) {
       numbersPlayed.push(secretNumber);
+      console.log(numbersPlayed);
+      highScore += score;
+      document.querySelector('.highscore').textContent = highScore;
       if (numbersPlayed.length === 20) {
         playing = false;
         displayMessage('Bang on!, end of Game, check your final score!');
       } else {
         displayMessage('Bang on! Press next to get next player');
+        score = 20;
+        document.querySelector('.score').textContent = score;
+        document.querySelector('.guess').value = '';
+        secretNumber = generateSecretNumber();
+        player.src = `player-${secretNumber}.png`;
+        console.log(`numbers played: ${numbersPlayed}`);
+        console.log(`new secretNumber: ${secretNumber}`);
       }
-      console.log(numbersPlayed);
-      highScore += score;
-      document.querySelector('.highscore').textContent = highScore;
     }
   }
 });
 
-// 'play again' button
+// 'next player' button
 document.querySelector('.again').addEventListener('click', function () {
   if (playing) {
     score = 20;
@@ -78,7 +85,7 @@ document.querySelector('.again').addEventListener('click', function () {
   }
 });
 
-//  input box reset
+//  input box reset by clicking on it
 document.querySelector('.guess').addEventListener('click', function () {
   document.querySelector('.guess').value = '';
 });
