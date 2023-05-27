@@ -27,26 +27,15 @@
       </div>
 
       <!-- player photo graphic -->
-      <div class="player-box">
-        <img class="player-photo" src="" alt="" />
-      </div>
     </header>
 
     <main>
-      <div class="next-player">
-        <button class="btn again btn--stripe">Skip Player</button>
+      <div class="player-box">
+        <img class="player-photo" src="" alt="" />
       </div>
-      <!-- end of game popup -->
-      <div class="end-game hidden">
-        <button class="close-modal">&times;</button>
-        <h1>End of Game</h1>
-        <p>Well done, you scored.</p>
-      </div>
-      <!-- popup overlay -->
-      <div class="overlay hidden"></div>
 
       <!-- left side column -->
-      <section class="left">
+      <section class="left column">
         <div class="left-box">
           <p class="message">Start Guessing...</p>
           <!-- guess input box -->
@@ -55,23 +44,26 @@
         </div>
       </section>
 
+      <!-- middle column -->
+      <div class="next-player middle column">
+        <button class="btn again btn--stripe">Skip Player</button>
+      </div>
+
       <!-- right side column -->
-      <section class="right">
-        <table class="table score-table">
-          <tr>
-            <td>Attempts Left</td>
-            <td class="score">20</td>
-          </tr>
-          <tr>
-            <td class="label-highscore">HighScore</td>
-            <td class="highscore">0</td>
-          </tr>
-        </table>
-        <!-- <p class="label-score">Score: <span class="score">20</span></p> -->
-        <!-- <p class="label-highscore">
+      <section class="right column">
+        <p class="label-score">Score: <span class="score">20</span></p>
+        <p class="label-highscore">
           Highscore: <span class="highscore">0</span>
-        </p> -->
+        </p>
       </section>
+      <!-- end of game popup -->
+      <div class="end-game hidden">
+        <button class="close-modal">&times;</button>
+        <h1>End of Game</h1>
+        <p>Well done, you scored.</p>
+      </div>
+      <!-- popup overlay -->
+      <div class="overlay hidden"></div>
     </main>
     <script src="script.js"></script>
   </body>

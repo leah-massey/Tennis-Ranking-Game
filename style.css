@@ -64,6 +64,7 @@ h1.main {
 }
 
 .player-photo {
+  display: flex;
   width: 25rem;
   height: 25rem;
   position: absolute;
@@ -79,7 +80,8 @@ h1.main {
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 350%;
+  left: 270%;
+  top: 25rem;
 }
 
 .between {
@@ -115,7 +117,7 @@ h1.main {
 }
 
 .left {
-  left: 10rem;
+  left: 0rem;
   width: 52rem;
   height: 5rem;
   display: absolute;
@@ -140,6 +142,7 @@ h1.main {
   background-color: #fff;
   color: #666;
   border: 2px solid #666;
+  left: 0rem;
 }
 
 .message {

@@ -21,6 +21,7 @@ console.log(`secretNumber: ${secretNumber}`);
 player.src = `player-${secretNumber}.png`;
 
 //setting the scores at start of game
+
 let score = 20;
 let highScore = 0;
 const displayMessage = function (message) {
@@ -96,7 +97,7 @@ document.querySelector('.reset').addEventListener('click', function () {
   playing = true;
   secretNumber = generateSecretNumber();
   player.src = `player-${secretNumber}.png`;
-  console.log(`numbers played: ${numbersPlayed}`);
+
   console.log(`new secretNumber: ${secretNumber}`);
   score = 20;
   document.querySelector('.score').textContent = score;
