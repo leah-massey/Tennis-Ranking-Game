@@ -17,6 +17,36 @@
         <button class="btn btn--stripe open-modal how-to">How to play</button>
         <button class="btn btn--stripe reset">Start again</button>
       </nav>
+    </header>
+
+    <main>
+      <wrapper class="columns">
+        <!-- left side column -->
+        <section class="left column">
+          <div class="left-box">
+            <p class="message">Start Guessing...</p>
+            <!-- guess input box -->
+            <input type="number" class="guess" />
+            <button class="btn check btn--stripe">Check!</button>
+          </div>
+        </section>
+
+        <!-- middle column -->
+        <section class="next-player middle column">
+          <div class="player-box">
+            <img class="player-photo" src="" alt="" />
+          </div>
+          <button class="btn again btn--stripe">Skip Player</button>
+        </section>
+
+        <!-- right side column -->
+        <section class="right column">
+          <p class="label-score">Score: <span class="score">20</span></p>
+          <p class="label-highscore">
+            Highscore: <span class="highscore">0</span>
+          </p>
+        </section>
+      </wrapper>
 
       <!-- how to play popup -->
       <div class="modal hidden">
@@ -28,35 +58,6 @@
         </p>
       </div>
 
-      <!-- player photo graphic -->
-    </header>
-
-    <main>
-      <!-- left side column -->
-      <section class="left column">
-        <div class="left-box">
-          <p class="message">Start Guessing...</p>
-          <!-- guess input box -->
-          <input type="number" class="guess" />
-          <button class="btn check btn--stripe">Check!</button>
-        </div>
-      </section>
-
-      <!-- middle column -->
-      <div class="player-box">
-        <img class="player-photo" src="" alt="" />
-      </div>
-      <div class="next-player middle column">
-        <button class="btn again btn--stripe">Skip Player</button>
-      </div>
-
-      <!-- right side column -->
-      <section class="right column">
-        <p class="label-score">Score: <span class="score">20</span></p>
-        <p class="label-highscore">
-          Highscore: <span class="highscore">0</span>
-        </p>
-      </section>
       <!-- end of game popup -->
       <div class="end-game hidden">
         <button class="close-modal">&times;</button>

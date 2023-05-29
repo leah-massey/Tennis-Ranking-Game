@@ -1,3 +1,8 @@
+.player-photo {
+  width: 300px;
+  height: 300px;
+}
+
 /* Chrome, Safari, Edge, Opera - removing number arrows */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
