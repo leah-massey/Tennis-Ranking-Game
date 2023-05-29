@@ -47,6 +47,12 @@ header {
   cursor: pointer;
 }
 
+.nav-btn {
+  display: block;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
 /* Chrome, Safari, Edge, Opera - removing number arrows */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
