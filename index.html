@@ -20,53 +20,56 @@
     </header>
 
     <main>
-      <wrapper class="columns">
-        <!-- left side column -->
-        <section class="left column">
-          <div class="left-box">
-            <p class="message">Start Guessing...</p>
-            <!-- guess input box -->
-            <input type="number" class="guess" />
-            <button class="btn check btn--stripe">Check!</button>
-          </div>
-        </section>
+      <div class="container">
+        <wrapper class="columns">
+          <!-- left side column -->
+          <section class="left column">
+            <div class="left-box">
+              <p class="message">Start Guessing...</p>
+              <!-- guess input box -->
+              <input type="number" class="guess" />
+              <button class="btn check btn--stripe">Check!</button>
+            </div>
+          </section>
 
-        <!-- middle column -->
-        <section class="next-player middle column">
-          <div class="player-box">
-            <img class="player-photo" src="" alt="" />
-          </div>
-          <button class="btn again btn--stripe">Skip Player</button>
-        </section>
+          <!-- middle column -->
+          <section class="next-player middle column">
+            <div class="player-box">
+              <img class="player-photo" src="" alt="" />
+            </div>
+            <button class="btn again btn--stripe">Skip Player</button>
+          </section>
 
-        <!-- right side column -->
-        <section class="right column">
-          <p class="label-score">Score: <span class="score">20</span></p>
-          <p class="label-highscore">
-            Highscore: <span class="highscore">0</span>
+          <!-- right side column -->
+          <section class="right column">
+            <p class="label-score">Score: <span class="score">20</span></p>
+            <p class="label-highscore">
+              Highscore: <span class="highscore">0</span>
+            </p>
+          </section>
+        </wrapper>
+
+        <!-- how to play popup -->
+        <div class="modal hidden">
+          <button class="close-modal">&times;</button>
+          <h1>How to play 🎾</h1>
+          <p>
+            These are the instructions on how to play. Follow them very closely!
+            Max score is 400. Guess the players rank.
           </p>
-        </section>
-      </wrapper>
+        </div>
 
-      <!-- how to play popup -->
-      <div class="modal hidden">
-        <button class="close-modal">&times;</button>
-        <h1>How to play 🎾</h1>
-        <p>
-          These are the instructions on how to play. Follow them very closely!
-          Max score is 400. Guess the players rank.
-        </p>
+        <!-- end of game popup -->
+        <div class="end-game hidden">
+          <button class="close-modal">&times;</button>
+          <h1>End of Game</h1>
+          <p>Well done, you scored.</p>
+        </div>
+        <!-- popup overlay -->
+        <div class="overlay hidden"></div>
       </div>
-
-      <!-- end of game popup -->
-      <div class="end-game hidden">
-        <button class="close-modal">&times;</button>
-        <h1>End of Game</h1>
-        <p>Well done, you scored.</p>
-      </div>
-      <!-- popup overlay -->
-      <div class="overlay hidden"></div>
     </main>
+
     <script src="script.js"></script>
   </body>
   <footer>This game was created by Leah</footer>

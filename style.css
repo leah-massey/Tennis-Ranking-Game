@@ -16,6 +16,12 @@ header {
   border-bottom: 7px solid #eee;
 }
 
+.container {
+  width: 825px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main-header,
 .sub-header {
   text-align: center;
@@ -23,14 +29,22 @@ header {
 
 .columns {
   display: flex;
-  width: 50%;
-  margin: auto;
+  width: 100%;
   justify-content: center;
+}
+
+.column {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .player-photo {
   width: 300px;
   height: 300px;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 /* Chrome, Safari, Edge, Opera - removing number arrows */
