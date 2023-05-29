@@ -13,9 +13,11 @@
       <h1 class="main outline">Guess their Ranking!</h1>
       <!-- subheading -->
       <p class="between">(Between 1 and 20)</p>
-      <button class="btn btn--stripe open-modal how-to">How to play</button>
-      <button class="btn btn--stripe reset">Start again</button>
-      <!-- <button class="btn btn--stripe reset">ATP players</button> -->
+      <nav>
+        <button class="btn btn--stripe open-modal how-to">How to play</button>
+        <button class="btn btn--stripe reset">Start again</button>
+      </nav>
+
       <!-- how to play popup -->
       <div class="modal hidden">
         <button class="close-modal">&times;</button>
@@ -30,10 +32,6 @@
     </header>
 
     <main>
-      <div class="player-box">
-        <img class="player-photo" src="" alt="" />
-      </div>
-
       <!-- left side column -->
       <section class="left column">
         <div class="left-box">
@@ -45,6 +43,9 @@
       </section>
 
       <!-- middle column -->
+      <div class="player-box">
+        <img class="player-photo" src="" alt="" />
+      </div>
       <div class="next-player middle column">
         <button class="btn again btn--stripe">Skip Player</button>
       </div>
