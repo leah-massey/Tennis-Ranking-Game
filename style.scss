@@ -75,6 +75,14 @@ footer {
 .guess {
   height: 90px;
   border-radius: 6px;
+  background: none;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #eee;
+  font-size: 40px;
+  width: 80%;
+  height: 70%;
+  text-align: center;
 }
 
 .left-box {
@@ -132,8 +140,7 @@ footer {
 .right-box {
   background-color: #fff;
   color: $btn-color;
-
-  height: 120px;
+  height: 90px;
   border: 2px solid $border-color;
   border-radius: 6px;
   padding-top: 15px;
@@ -147,15 +154,15 @@ footer {
 .label-score {
   font-size: 15px;
   position: absolute;
-  top: 50px;
-  left: 35px;
+  top: 20px;
+  left: 38px;
 }
 
 .label-highscore {
   font-weight: bold;
   font-size: 30px;
   position: absolute;
-  bottom: 30px;
+  bottom: 25px;
   margin-left: 25px;
 }
 
