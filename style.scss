@@ -14,6 +14,7 @@ header {
   padding-bottom: 50px;
   margin-bottom: 30px;
   border-bottom: 7px solid #eee;
+  position: relative;
 }
 
 .container {
@@ -38,6 +39,11 @@ header {
   padding-right: 10px;
 }
 
+.right,
+.left {
+  width: 215px;
+}
+
 .player-photo {
   width: 300px;
   height: 300px;
@@ -47,11 +53,64 @@ header {
   cursor: pointer;
 }
 
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .nav-btn {
   display: block;
   margin-top: 10px;
   margin-left: 20px;
 }
+
+.hidden {
+  display: none;
+}
+
+// popup box
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+
+  width: 70%;
+  color: black;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+// popup closure
+.close-modal {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  font-size: 25px;
+  color: black;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+// buttton features
+.open-modal,
+.reset {
+  cursor: pointer;
+}
+
+// .overlay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.6);
+//   backdrop-filter: blur(3px);
+//   z-index: 5;
+// }
+
 // $color-gray: #666;
 // $color-black: #000;
 // $stripe-height: 7px;
