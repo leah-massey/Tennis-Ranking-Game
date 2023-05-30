@@ -37,6 +37,7 @@ header {
 .column {
   padding-left: 10px;
   padding-right: 10px;
+  text-align: center;
 }
 
 .right,
@@ -47,6 +48,10 @@ header {
 .player-photo {
   width: 300px;
   height: 300px;
+}
+
+.again {
+  margin-top: 10px;
 }
 
 .btn:hover {
