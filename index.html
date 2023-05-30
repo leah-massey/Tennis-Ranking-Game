@@ -10,61 +10,76 @@
   <body>
     <header>
       <!-- page heading -->
-      <h1 class="main outline">Guess their Ranking!</h1>
+      <h1 class="main-header">Guess their Ranking!</h1>
       <!-- subheading -->
-      <p class="between">(Between 1 and 20)</p>
-      <button class="btn btn--stripe open-modal how-to">How to play</button>
-      <button class="btn btn--stripe reset">Start again</button>
-      <!-- <button class="btn btn--stripe reset">ATP players</button> -->
-      <!-- how to play popup -->
-      <div class="modal hidden">
-        <button class="close-modal">&times;</button>
-        <h1>How to play 🎾</h1>
-        <p>
-          These are the instructions on how to play. Follow them very closely!
-          Max score is 400. Guess the players rank.
-        </p>
-      </div>
-
-      <!-- player photo graphic -->
+      <p class="sub-header">
+        How well do you know the top 20 female tennis players?
+      </p>
+      <nav>
+        <button class="btn nav-btn btn--stripe open-modal how-to">
+          How to play
+        </button>
+        <button class="btn nav-btn btn--stripe reset">Start again</button>
+      </nav>
     </header>
 
     <main>
-      <div class="player-box">
-        <img class="player-photo" src="" alt="" />
-      </div>
+      <div class="container">
+        <wrapper class="columns">
+          <!-- left side column -->
+          <section class="left column">
+            <div class="left-box">
+              <div class="input-box">
+                <p class="message">Start Guessing...</p>
+                <!-- guess input box -->
+                <input type="number" class="guess" />
+              </div>
+              <button class="btn check btn--stripe">Check!</button>
+            </div>
+          </section>
 
-      <!-- left side column -->
-      <section class="left column">
-        <div class="left-box">
-          <p class="message">Start Guessing...</p>
-          <!-- guess input box -->
-          <input type="number" class="guess" />
-          <button class="btn check btn--stripe">Check!</button>
+          <!-- middle column -->
+          <section class="next-player middle column">
+            <div class="player-box">
+              <img class="player-photo" src="" alt="" />
+            </div>
+            <button class="btn again btn--stripe">Skip Player</button>
+          </section>
+
+          <!-- right side column -->
+          <section class="right column">
+            <div class="right-box">
+              <p class="label-score">
+                Attempts left: <span class="score">20</span>
+              </p>
+              <p class="label-highscore">
+                Score: <span class="highscore">0</span>
+              </p>
+            </div>
+          </section>
+        </wrapper>
+
+        <!-- how to play popup -->
+        <div class="modal hidden">
+          <button class="close-modal">&times;</button>
+          <h1>How to play 🎾</h1>
+          <p>
+            These are the instructions on how to play. Follow them very closely!
+            Max score is 400. Guess the players rank.
+          </p>
         </div>
-      </section>
 
-      <!-- middle column -->
-      <div class="next-player middle column">
-        <button class="btn again btn--stripe">Skip Player</button>
+        <!-- end of game popup -->
+        <div class="end-game hidden">
+          <button class="close-modal">&times;</button>
+          <h1>End of Game</h1>
+          <p>Well done, you scored.</p>
+        </div>
+        <!-- popup overlay -->
+        <div class="overlay hidden"></div>
       </div>
-
-      <!-- right side column -->
-      <section class="right column">
-        <p class="label-score">Score: <span class="score">20</span></p>
-        <p class="label-highscore">
-          Highscore: <span class="highscore">0</span>
-        </p>
-      </section>
-      <!-- end of game popup -->
-      <div class="end-game hidden">
-        <button class="close-modal">&times;</button>
-        <h1>End of Game</h1>
-        <p>Well done, you scored.</p>
-      </div>
-      <!-- popup overlay -->
-      <div class="overlay hidden"></div>
     </main>
+
     <script src="script.js"></script>
   </body>
   <footer>This game was created by Leah</footer>
