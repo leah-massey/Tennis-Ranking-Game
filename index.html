@@ -12,7 +12,9 @@
       <!-- page heading -->
       <h1 class="main-header">Guess their Ranking!</h1>
       <!-- subheading -->
-      <p class="sub-header">How well do you know the top 20 players?</p>
+      <p class="sub-header">
+        How well do you know the top 20 female tennis players?
+      </p>
       <nav>
         <button class="btn nav-btn btn--stripe open-modal how-to">
           How to play
@@ -27,9 +29,11 @@
           <!-- left side column -->
           <section class="left column">
             <div class="left-box">
-              <p class="message">Start Guessing...</p>
-              <!-- guess input box -->
-              <input type="number" class="guess" />
+              <div class="input-box">
+                <p class="message">Start Guessing...</p>
+                <!-- guess input box -->
+                <input type="number" class="guess" />
+              </div>
               <button class="btn check btn--stripe">Check!</button>
             </div>
           </section>
@@ -44,10 +48,14 @@
 
           <!-- right side column -->
           <section class="right column">
-            <p class="label-score">Score: <span class="score">20</span></p>
-            <p class="label-highscore">
-              Highscore: <span class="highscore">0</span>
-            </p>
+            <div class="right-box">
+              <p class="label-score">
+                Attempts left: <span class="score">20</span>
+              </p>
+              <p class="label-highscore">
+                Score: <span class="highscore">0</span>
+              </p>
+            </div>
           </section>
         </wrapper>
 

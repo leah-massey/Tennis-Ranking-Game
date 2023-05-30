@@ -17,6 +17,11 @@ header {
   position: relative;
 }
 
+footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 .container {
   width: 825px;
   margin-left: auto;
@@ -39,6 +44,7 @@ header {
   display: flex;
   width: 100%;
   justify-content: center;
+  margin-bottom: 200px;
 }
 
 .column {
@@ -52,13 +58,93 @@ header {
   width: 215px;
 }
 
-.player-photo {
+.message {
+  margin-bottom: 15px;
+}
+
+.guess {
+  height: 90px;
+  border-radius: 6px;
+}
+
+.left-box {
+  position: relative;
+  height: 366px;
+  width: 215px;
+}
+
+.input-box {
+  background-color: #fff;
+  color: #666;
+  height: 120px;
+  border: 2px solid #666;
+  border-radius: 6px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 80%;
+  position: absolute;
+  bottom: 65px;
+  left: 20px;
+}
+
+.check {
+  position: absolute;
+  top: 310px;
+  left: 45px;
+  display: block;
+}
+
+.player-box {
   width: 300px;
   height: 300px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.player-photo {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
 }
 
 .again {
   margin-top: 10px;
+}
+
+.right {
+  position: relative;
+}
+
+.right-box {
+  background-color: #fff;
+  color: #666;
+  height: 120px;
+  border: 2px solid #666;
+  border-radius: 6px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 80%;
+  position: absolute;
+  bottom: 65px;
+  left: 20px;
+}
+
+.label-score {
+  font-size: 15px;
+  position: absolute;
+  top: 50px;
+  left: 35px;
+}
+
+.label-highscore {
+  font-weight: bold;
+  font-size: 30px;
+  position: absolute;
+  bottom: 30px;
+  margin-left: 25px;
 }
 
 .btn:hover {
@@ -119,6 +205,7 @@ nav {
   -moz-user-select: text;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 12px;
   padding: 16px 36px 22px;
   background-color: #fff;
   color: #666;
