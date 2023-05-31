@@ -46,7 +46,7 @@ let secretNumber = generateSecretNumber();
 
 //setting the scores at start of game
 
-let score = 20;
+let score = 10;
 let highScore = 0;
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
@@ -78,18 +78,20 @@ document.querySelector('.check').addEventListener('click', function () {
             : "Mmm... they're not quite that good 😬"
         );
         score--;
-        //added
         attemptsLeft.textContent =
           'Attempts left to guess ' +
           players[`${secretNumber}` - 1] +
           "'s ranking: " +
           score;
-        //
 
-        //document.querySelector('.score').textContent = score;
+        //  if no guesses left
       } else {
         displayMessage('Sorry, game over');
-        document.querySelector('.score').textContent = 0;
+        attemptsLeft.textContent =
+          'Attempts left to guess ' +
+          players[`${secretNumber}` - 1] +
+          "'s ranking: " +
+          0;
       }
       // if guess correct
     } else if (guess === secretNumber) {
@@ -102,7 +104,7 @@ document.querySelector('.check').addEventListener('click', function () {
         displayMessage('Bang on! End of Game! 🍾');
       } else {
         displayMessage('Bang on! 💥 Try the next player!');
-        score = 20;
+        score = 10;
         document.querySelector('.guess').value = '';
         secretNumber = generateSecretNumber();
         attemptsLeft.textContent =
@@ -121,7 +123,7 @@ document.querySelector('.check').addEventListener('click', function () {
 // 'next player' button
 document.querySelector('.again').addEventListener('click', function () {
   if (playing) {
-    score = 20;
+    score = 10;
     document.querySelector('.guess').value = '';
     secretNumber = generateSecretNumber();
     attemptsLeft.textContent = 'Attempts left to guess ' + '\n';
@@ -146,7 +148,7 @@ document.querySelector('.reset').addEventListener('click', function () {
   player.src = `player-${secretNumber}.png`;
 
   console.log(`new secretNumber: ${secretNumber}`);
-  score = 20;
+  score = 10;
   document.querySelector('.score').textContent = score;
   highScore = 0;
   document.querySelector('.highscore').textContent = highScore;
