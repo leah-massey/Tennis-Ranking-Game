@@ -27,7 +27,7 @@ The maximum score for a completed game is 200 (10 points for each of the 20 play
 ## Demo
 
 <p align="center">
-<img src = "screenshots/diagram_1.png" width="600" text-align="center">
+<img src = "screenshots/diagram_1.png" width="1000" text-align="center">
 </p>
 
 <p align="center">
