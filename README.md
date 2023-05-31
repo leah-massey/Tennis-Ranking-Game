@@ -27,7 +27,7 @@ The maximum score for a completed game is 200 (10 points for each of the 20 play
 ## Demo
 
 <p align="center">
-<img src = "screenshots/main-page.png" width="600" text-align="center">
+<img src = "screenshots/diagram.png" width="600" text-align="center">
 </p>
 
 <p align="center">
@@ -49,10 +49,6 @@ The maximum score for a completed game is 200 (10 points for each of the 20 play
 <p align="center">
 <img src = "screenshots/how-to.png" width="600" text-align="center">
 </p>
-
-
-
-
 
 ## MOTIVATION
 
