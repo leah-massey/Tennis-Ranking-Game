@@ -153,6 +153,10 @@ footer {
   line-height: 1.6;
 }
 
+.label-score:last-of-type {
+  font-weight: bold;
+}
+
 .label-highscore {
   font-weight: bold;
   font-size: 30px;
@@ -183,13 +187,17 @@ nav {
 
 .modal {
   position: absolute;
-  top: 50%;
-  left: 20%;
+  top: 35%;
+  left: 15%;
   width: 70%;
   color: black;
   background-color: white;
-  padding: 10px;
+  padding: 30px;
   border-radius: 5px;
+}
+
+.rules {
+  padding-bottom: 15px;
 }
 
 .close-modal {
