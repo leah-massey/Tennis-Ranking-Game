@@ -149,6 +149,7 @@ document.querySelector('.reset').addEventListener('click', function () {
   numbersPlayed = [];
   playing = true;
   score = 10;
+  highScore = 0;
 
   secretNumber = generateSecretNumber();
   player.src = `player-${secretNumber}.png`;
