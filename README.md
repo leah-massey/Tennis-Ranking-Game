@@ -4,8 +4,6 @@ A game where a user must successfully guess the rank of all top 20 female tennis
 
 ![screenshot](screenshots/main-page.png 'Main page');
 
-![Screenshot 2023-05-31 at 11 42 55](https://github.com/leah-massey/Tennis-Ranking-Game/assets/15648177/17361c48-1671-43ff-95e6-efd94dffd600) | width = 50
-
 ## Table of contents
 
 - [How to Play](#how-to-play)
