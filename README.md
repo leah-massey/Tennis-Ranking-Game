@@ -2,6 +2,9 @@
 
 A game where a user must successfully guess the rank of all top 20 female tennis players.
 
+![Screenshot 2023-05-31 at 11 42 55](https://github.com/leah-massey/Tennis-Ranking-Game/assets/15648177/17361c48-1671-43ff-95e6-efd94dffd600) | width = 50
+
+
 ## Table of contents
 
 * [How to Play](#how-to-play)
@@ -23,7 +26,7 @@ The maximum score for a completed game is 200 (10 points for each of the 20 play
  
  
 ## MOTIVATION
-I built this game as a way of solidifying the my learning and understanding of Javascript, HTML and CSS. Along the way I learned to use SASS to add a bit more interest to the page design. 
+I built this game as a way of solidifying the my learning and understanding of Javascript, HTML and CSS. Along the way I learned to use SASS to add a bit more interest to the page design. The game has a lot of scope for further development - see future improvements. 
 
 
 ## Technologies
@@ -32,16 +35,10 @@ Javascript
 HTML 
 CSS 
 SASS
-
-
-
-
 	
-## Technologies
-Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+## Future improvements / additions
+I'd like to add an animation to the project - curious to know if I can make a ball bounce across the screen!
+I'd like to connect the project to a live rankings list so that the players rankings are always up to date. 
 	
 ## Setup
 To run this project, install it locally using npm:
