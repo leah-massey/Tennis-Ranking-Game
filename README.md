@@ -2,7 +2,9 @@
 
 A game where a user must successfully guess the rank of all top 20 female tennis players.
 
-![screenshot](screenshots/main-page.png 'Main page');
+<p align="center">
+<img src = "screenshots/main-page.png" width="600" text-align="center">
+</p>
 
 ## Table of contents
 
