@@ -2,13 +2,10 @@
 
 A game where a user must successfully guess the rank of all top 20 female tennis players.
 
-<p align="center">
-<img src = "screenshots/main-page.png" width="600" text-align="center">
-</p>
-
 ## Table of contents
 
 - [How to Play](#how-to-play)
+- [Demo](#demo)
 - [Motivation](#motivation)
 - [Technologies](#technologies)
 - [Setup](#setup)
@@ -22,10 +19,40 @@ A player has 10 chances to guess the ranking of each tennis player, if they fail
 
 Players are generated one at a time but if a user is stuck, they can temporarily skip a player and return to them later.
 
-## Scoring
+### Scoring
 
 A user can score a maximum of 10 points per player. With each additional guess they have to make, their point earning potential reduces by 1.
 The maximum score for a completed game is 200 (10 points for each of the 20 players). The minimum score for a completed game is 20 (1 point for each of the 20 players).
+
+## Demo
+
+<p align="center">
+<img src = "screenshots/main-page.png" width="600" text-align="center">
+</p>
+
+<p align="center">
+<img src = "screenshots/incorrect-guess.png" width="600" text-align="center">
+</p>
+
+<p align="center">
+<img src = "screenshots/incorrect-guess2.png" width="600" text-align="center">
+</p>
+
+<p align="center">
+<img src = "screenshots/correct-guess.png" width="600" text-align="center">
+</p>
+
+<p align="center">
+<img src = "screenshots/button.png" width="600" text-align="center">
+</p>
+
+<p align="center">
+<img src = "screenshots/how-to.png" width="600" text-align="center">
+</p>
+
+
+
+
 
 ## MOTIVATION
 
