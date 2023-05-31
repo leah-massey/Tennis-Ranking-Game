@@ -148,13 +148,9 @@ footer {
   font-size: 15px;
   position: absolute;
   top: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   line-height: 1.6;
-}
-
-.label-score:last-of-type {
-  font-weight: bold;
 }
 
 .label-highscore {

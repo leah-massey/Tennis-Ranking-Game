@@ -75,7 +75,7 @@ document.querySelector('.check').addEventListener('click', function () {
         displayMessage(
           guess > secretNumber
             ? 'You underestimate them!'
-            : "Mmm... they're not quite that good 😬"
+            : "Mmm... they're not quite that good!"
         );
         score--;
         attemptsLeft.textContent =
@@ -86,7 +86,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
         //  if no guesses left
       } else {
-        displayMessage('Sorry, game over');
+        displayMessage('Sorry, game over. You ran out of guesses 😔');
         playing = false;
         attemptsLeft.textContent =
           'Attempts left to guess ' +
