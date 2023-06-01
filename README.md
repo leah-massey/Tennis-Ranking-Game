@@ -4,12 +4,13 @@ A game where a user must successfully guess the rank of all top 20 female tennis
 
 ## Table of contents
 
-- [How to Play](#how-to-play)
+- [How to Play](#how-to)
 - [Demo](#demo)
 - [Motivation](#motivation)
 - [Technologies](#technologies)
 - [Setup](#setup)
 
+<a name="how-to"></a>
 ## How to Play
 
 A user types their guess into the box.
@@ -24,6 +25,7 @@ Players are generated one at a time but if a user is stuck, they can temporarily
 A user can score a maximum of 10 points per player. With each additional guess they have to make, their point earning potential reduces by 1.
 The maximum score for a completed game is 200 (10 points for each of the 20 players). The minimum score for a completed game is 20 (1 point for each of the 20 players).
 
+<a name="demo"></a>
 ## Demo
 
 <p align="center">
@@ -34,10 +36,12 @@ The maximum score for a completed game is 200 (10 points for each of the 20 play
 <img src = "screenshots/diagram_2.png" width="1000" text-align="center">
 </p>
 
+<a name="motivation"></a>
 ## Motivation
 
 I built this game as a way of solidifying the my learning and understanding of Javascript, HTML and CSS. Along the way I learned to use SASS to add a bit more interest to the page design. The game has a lot of scope for further development - see future improvements.
 
+<a name="technologies"></a>
 ## Technologies
 
 Built using:
@@ -52,6 +56,7 @@ Add an animation to the project - curious to know if I can make a ball bounce ac
 Connect the project to a live rankings list so that the players rankings are always up to date.
 Introduce the option to guess the rankings of the male tennis players too. 
 
+<a name="setup"></a>
 ## Setup
 
 ### To run this project :
