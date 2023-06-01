@@ -54,7 +54,7 @@ const displayMessage = function (message) {
 
 console.log(`secretNumber: ${secretNumber}`);
 //connect random number to player image
-player.src = `player-${secretNumber}.png`;
+player.src = `./playerImages/player-${secretNumber}.png`;
 attemptsLeft.textContent =
   'Attempts left to guess ' +
   players[`${secretNumber}` - 1] +
@@ -113,7 +113,7 @@ document.querySelector('.check').addEventListener('click', function () {
           players[`${secretNumber}` - 1] +
           "'s ranking: " +
           score;
-        player.src = `player-${secretNumber}.png`;
+        player.src = `./playerImages/player-${secretNumber}.png`;
         console.log(`numbers played: ${numbersPlayed}`);
         console.log(`new secretNumber: ${secretNumber}`);
       }
@@ -132,7 +132,7 @@ document.querySelector('.again').addEventListener('click', function () {
       players[`${secretNumber}` - 1] +
       "'s ranking: " +
       score;
-    player.src = `player-${secretNumber}.png`;
+    player.src = `./playerImages/player-${secretNumber}.png`;
     console.log(`numbers played: ${numbersPlayed}`);
     console.log(`new secretNumber: ${secretNumber}`);
     displayMessage('Start guessing... 🤞🏻');
@@ -152,7 +152,7 @@ document.querySelector('.reset').addEventListener('click', function () {
   highScore = 0;
 
   secretNumber = generateSecretNumber();
-  player.src = `player-${secretNumber}.png`;
+  player.src = `./playerImages/player-${secretNumber}.png`;
 
   console.log(`new secretNumber: ${secretNumber}`);
 
