@@ -54,16 +54,16 @@ Introduce the option to guess the rankings of the male tennis players too.
 
 ## Setup
 
-To run this project :
+### To run this project :
 
-clone this repository
+Clone this repository
 
 ```
 $ git clone https://github.com/leah-massey/Tennis-Ranking-Game.git
 ```
 
 
-Check that you have Ruby installed (if not installed, follow link to install: ["https://www.ruby-lang.org/en/documentation/installation/"]
+Check that you have Ruby installed (if not installed, follow link to install: ["https://www.ruby-lang.org/en/documentation/installation/"])
 
 ```
 $ ruby --version
