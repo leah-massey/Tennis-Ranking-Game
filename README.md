@@ -34,29 +34,57 @@ The maximum score for a completed game is 200 (10 points for each of the 20 play
 <img src = "screenshots/diagram_2.png" width="1000" text-align="center">
 </p>
 
-## MOTIVATION
+## Motivation
 
 I built this game as a way of solidifying the my learning and understanding of Javascript, HTML and CSS. Along the way I learned to use SASS to add a bit more interest to the page design. The game has a lot of scope for further development - see future improvements.
 
 ## Technologies
 
 Built using:
-Javascript
-HTML
-CSS
-SASS
+* Javascript
+* HTML
+* CSS
+* SASS (to manage CSS stylesheets)
 
 ## Future improvements / additions
 
-I'd like to add an animation to the project - curious to know if I can make a ball bounce across the screen!
-I'd like to connect the project to a live rankings list so that the players rankings are always up to date.
+Add an animation to the project - curious to know if I can make a ball bounce across the screen!
+Connect the project to a live rankings list so that the players rankings are always up to date.
+Introduce the option to guess the rankings of the male tennis players too. 
 
 ## Setup
 
-To run this project, install it locally using npm:
+To run this project :
+
+clone this repository
 
 ```
-$ cd ../lorem
-$ npm install
-$ npm start
+$ git clone https://github.com/leah-massey/Tennis-Ranking-Game.git
+```
+
+
+Check that you have Ruby installed (if not installed, follow link to install: ["https://www.ruby-lang.org/en/documentation/installation/"]
+
+```
+$ ruby --version
+```
+
+
+Install SASS
+
+```
+gem install sass
+```
+
+
+Verify SASS installation 
+```
+sass --version
+```
+
+
+Finally:
+
+```
+Open the 'index.html' file in your web browser of choice.
 ```
