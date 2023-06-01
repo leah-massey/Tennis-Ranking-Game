@@ -4,11 +4,11 @@ A game where a user must successfully guess the rank of all top 20 female tennis
 
 ## Table of contents
 
-- [How to Play](#how-to)
-- [Demo](#demo)
-- [Motivation](#motivation)
-- [Technologies](#technologies)
-- [Setup](#setup)
+-  🤷🏼‍♀️ [How to Play](#how-to)
+-  📸 [Demo](#demo) 
+-  💪🏻 [Motivation](#motivation) 
+-  💻 [Technologies](#technologies) 
+-  🛠️ [Setup](#setup) 
 
 <a name="how-to"></a>
 ## How to Play
