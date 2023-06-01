@@ -83,7 +83,6 @@ document.querySelector('.check').addEventListener('click', function () {
           players[`${secretNumber}` - 1] +
           "'s ranking: " +
           score;
-
         //  if no guesses left
       } else {
         displayMessage('Sorry, game over. You ran out of guesses 😔');
@@ -150,18 +149,14 @@ document.querySelector('.reset').addEventListener('click', function () {
   playing = true;
   score = 10;
   highScore = 0;
-
   secretNumber = generateSecretNumber();
   player.src = `./playerImages/player-${secretNumber}.png`;
-
   console.log(`new secretNumber: ${secretNumber}`);
-
   attemptsLeft.textContent =
     'Attempts left to guess ' +
     players[`${secretNumber}` - 1] +
     "'s ranking: " +
     score;
-
   document.querySelector('.highscore').textContent = highScore;
   displayMessage('Start guessing...');
 });
