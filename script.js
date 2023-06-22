@@ -32,33 +32,31 @@ let numbersPlayed = [];
 let playing = true;
 
 //generate random number
-let generateSecretNumber = function () {
+let generateNumberToGuess = function () {
   let newNumber = Math.trunc(Math.random() * 20) + 1;
 
   //add while loop so that random number is not repeated in the game
   while (numbersPlayed.includes(newNumber)) {
-    newNumber = generateSecretNumber();
-    //newNumber = Math.trunc(Math.random() * 20) + 1;
+    newNumber = generateNumberToGuess();
   }
   return newNumber;
 };
 
-let secretNumber = generateSecretNumber();
+let numberToGuess = generateNumberToGuess();
 
-//setting the scores at start of game
-
+//* Setting the scores at start of game
 let score = 10;
 let highScore = 0;
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
 
-console.log(`secretNumber: ${secretNumber}`);
+console.log(`numberToGuess: ${numberToGuess}`);
 //connect random number to player image
-playerPhoto.src = `./playerImages/player-${secretNumber}.png`;
+playerPhoto.src = `./playerImages/player-${numberToGuess}.png`;
 attemptsLeft.textContent =
   'Attempts left to guess ' +
-  players[`${secretNumber}` - 1] +
+  players[`${numberToGuess}` - 1] +
   "'s ranking: " +
   score;
 
@@ -71,17 +69,17 @@ document.querySelector('.check').addEventListener('click', function () {
     if (!guess || guess > 20 || guess < 1) {
       displayMessage('You must enter a number between 1 and 20');
       // if guess not correct
-    } else if (guess !== secretNumber) {
+    } else if (guess !== numberToGuess) {
       if (score > 1) {
         displayMessage(
-          guess > secretNumber
+          guess > numberToGuess
             ? 'You underestimate them!'
             : "Mmm... they're not quite that good!"
         );
         score--;
         attemptsLeft.textContent =
           'Attempts left to guess ' +
-          players[`${secretNumber}` - 1] +
+          players[`${numberToGuess}` - 1] +
           "'s ranking: " +
           score;
         //  if no guesses left
@@ -90,13 +88,13 @@ document.querySelector('.check').addEventListener('click', function () {
         playing = false;
         attemptsLeft.textContent =
           'Attempts left to guess ' +
-          players[`${secretNumber}` - 1] +
+          players[`${numberToGuess}` - 1] +
           "'s ranking: " +
           0;
       }
       // if guess correct
-    } else if (guess === secretNumber) {
-      numbersPlayed.push(secretNumber);
+    } else if (guess === numberToGuess) {
+      numbersPlayed.push(numberToGuess);
       console.log(numbersPlayed);
       highScore += score;
       document.querySelector('.highscore').textContent = highScore;
@@ -107,15 +105,15 @@ document.querySelector('.check').addEventListener('click', function () {
         displayMessage('Bang on! 💥 Try the next player!');
         score = 10;
         document.querySelector('.guess').value = '';
-        secretNumber = generateSecretNumber();
+        numberToGuess = generateNumberToGuess();
         attemptsLeft.textContent =
           'Attempts left to guess ' +
-          players[`${secretNumber}` - 1] +
+          players[`${numberToGuess}` - 1] +
           "'s ranking: " +
           score;
-        playerPhoto.src = `./playerImages/player-${secretNumber}.png`;
+        playerPhoto.src = `./playerImages/player-${numberToGuess}.png`;
         console.log(`numbers played: ${numbersPlayed}`);
-        console.log(`new secretNumber: ${secretNumber}`);
+        console.log(`new numberToGuess: ${numberToGuess}`);
       }
     }
   }
@@ -126,7 +124,7 @@ document.querySelector('.again').addEventListener('click', function () {
   if (playing) {
     score = 10;
     document.querySelector('.guess').value = '';
-    secretNumber = generateSecretNumber();
+    secretNumber = generateNumberToGuess();
     attemptsLeft.textContent =
       'Attempts left to guess ' +
       players[`${secretNumber}` - 1] +
@@ -150,7 +148,7 @@ document.querySelector('.reset').addEventListener('click', function () {
   playing = true;
   score = 10;
   highScore = 0;
-  secretNumber = generateSecretNumber();
+  secretNumber = generateNumberToGuess();
   playerPhoto.src = `./playerImages/player-${secretNumber}.png`;
   console.log(`new secretNumber: ${secretNumber}`);
   attemptsLeft.textContent =
