@@ -2,7 +2,7 @@ const players = [
   {
     name: ['Iga', 'Swiatek'],
     ranking: 1,
-    image: {
+    photo: {
       src: './playerImages/player-1',
     },
   },
@@ -10,7 +10,7 @@ const players = [
   {
     name: ['Aryna', 'Sabalenka'],
     ranking: 2,
-    image: {
+    photo: {
       src: './playerImages/player-2',
     },
   },
@@ -18,7 +18,7 @@ const players = [
   {
     name: ['Jessica', 'Pegula'],
     ranking: 3,
-    image: {
+    photo: {
       src: './playerImages/player-3',
     },
   },
@@ -26,7 +26,7 @@ const players = [
   {
     name: ['Elena', 'Rybankina'],
     ranking: 4,
-    image: {
+    photo: {
       src: './playerImages/player-4',
     },
   },
@@ -34,7 +34,7 @@ const players = [
   {
     name: ['Caroline', 'Garcia'],
     ranking: 5,
-    image: {
+    photo: {
       src: './playerImages/player-5',
     },
   },
@@ -42,7 +42,7 @@ const players = [
   {
     name: ['Coco', 'Gauf'],
     ranking: 6,
-    image: {
+    photo: {
       src: './playerImages/player-6',
     },
   },
@@ -50,7 +50,7 @@ const players = [
   {
     name: ['Ons', 'Jabeur'],
     ranking: 7,
-    image: {
+    photo: {
       src: './playerImages/player-7',
     },
   },
@@ -58,7 +58,7 @@ const players = [
   {
     name: ['Maria', 'Sakkari'],
     ranking: 8,
-    image: {
+    photo: {
       src: './playerImages/player-8',
     },
   },
@@ -66,7 +66,7 @@ const players = [
   {
     name: ['Daria', 'Kasatkina'],
     ranking: 9,
-    image: {
+    photo: {
       src: './playerImages/player-9',
     },
   },
@@ -74,7 +74,7 @@ const players = [
   {
     name: ['Petra', 'Kvitova'],
     ranking: 10,
-    image: {
+    photo: {
       src: './playerImages/player-10',
     },
   },
@@ -82,7 +82,7 @@ const players = [
   {
     name: ['Belinda', 'Bencic'],
     ranking: 11,
-    image: {
+    photo: {
       src: './playerImages/player-11',
     },
   },
@@ -90,7 +90,7 @@ const players = [
   {
     name: ['Veronika', 'Kudermetova'],
     ranking: 12,
-    image: {
+    photo: {
       src: './playerImages/player-12',
     },
   },
@@ -98,7 +98,7 @@ const players = [
   {
     name: ['Barbora', 'Krejcikova'],
     ranking: 13,
-    image: {
+    photo: {
       src: './playerImages/player-13',
     },
   },
@@ -106,7 +106,7 @@ const players = [
   {
     name: ['Karolina', 'Pliskova'],
     ranking: 14,
-    image: {
+    photo: {
       src: './playerImages/player-14',
     },
   },
@@ -114,7 +114,7 @@ const players = [
   {
     name: ['Beatriz', 'Haddad Maia'],
     ranking: 15,
-    image: {
+    photo: {
       src: './playerImages/player-15',
     },
   },
@@ -122,7 +122,7 @@ const players = [
   {
     name: ['Liudmila', 'Samsonova'],
     ranking: 16,
-    image: {
+    photo: {
       src: './playerImages/player-16',
     },
   },
@@ -130,7 +130,7 @@ const players = [
   {
     name: ['Qinwen', 'Zheng Vic'],
     ranking: 17,
-    image: {
+    photo: {
       src: './playerImages/player-17',
     },
   },
@@ -138,7 +138,7 @@ const players = [
   {
     name: ['Victoria', 'Azarenka'],
     ranking: 18,
-    image: {
+    photo: {
       src: './playerImages/player-18',
     },
   },
@@ -146,7 +146,7 @@ const players = [
   {
     name: ['Madison', 'Keys'],
     ranking: 19,
-    image: {
+    photo: {
       src: './playerImages/player-19',
     },
   },
@@ -154,7 +154,7 @@ const players = [
   {
     name: ['Jelena', 'Ostapenko'],
     ranking: 20,
-    image: {
+    photo: {
       src: './playerImages/player-20',
     },
   },
