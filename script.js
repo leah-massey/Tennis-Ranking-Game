@@ -1,6 +1,6 @@
 'use strict';
-
-/////// players /////
+//* why can't I link up the two?
+//const players = require('./players');
 
 const players = [
   'Iga Swiatek',
@@ -37,7 +37,8 @@ let generateSecretNumber = function () {
 
   //add while loop so that random number is not repeated in the game
   while (numbersPlayed.includes(newNumber)) {
-    newNumber = Math.trunc(Math.random() * 20) + 1;
+    newNumber = generateSecretNumber();
+    //newNumber = Math.trunc(Math.random() * 20) + 1;
   }
   return newNumber;
 };
