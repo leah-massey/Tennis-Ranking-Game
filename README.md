@@ -52,9 +52,9 @@ Built using:
 
 ## Future improvements / additions
 
-Add an animation to the project - curious to know if I can make a ball bounce across the screen!
-Connect the project to a live rankings list so that the players rankings are always up to date.
-Introduce the option to guess the rankings of the male tennis players too. 
+<p>Add an animation to the project - curious to know if I can make a ball bounce across the screen!</p>
+<p>Connect the project to an API of live rankings list so that the players rankings are always up to date.</p>
+<p>Introduce the option to guess the rankings of the male tennis players too. </p>
 
 <a name="setup"></a>
 ## Setup
