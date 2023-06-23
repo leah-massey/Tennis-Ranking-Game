@@ -1,35 +1,44 @@
 'use strict';
-//* why can't I link up the two?
+
+import { retrievePlayers } from './playersRepository.mjs';
+retrievePlayers = require;
+
+let players = retrievePlayers();
+
 //const players = require('./players');
 
-const players = [
-  'Iga Swiatek',
-  'Aryna Sabalenka',
-  'Jessica Pegula',
-  'Elena Rybankina',
-  'Caroline Garcia',
-  'Coco Gauf',
-  'Ons Jabeur',
-  'Maria Sakkari',
-  'Daria Kasatkina',
-  'Petra Kvitova',
-  'Belinda Bencic',
-  'Veronika Kudermetova',
-  'Barbora Krejcikova',
-  'Karolina Pliskova',
-  'Beatriz Haddad Maia',
-  'Liudmila Samsonova',
-  'Victoria Azarenka',
-  'Qinwen Zheng Vic check',
-  'Madison Keys',
-  'Jelena Ostapenko',
-];
+// const players = [
+//   'Iga Swiatek',
+//   'Aryna Sabalenka',
+//   'Jessica Pegula',
+//   'Elena Rybankina',
+//   'Caroline Garcia',
+//   'Coco Gauf',
+//   'Ons Jabeur',
+//   'Maria Sakkari',
+//   'Daria Kasatkina',
+//   'Petra Kvitova',
+//   'Belinda Bencic',
+//   'Veronika Kudermetova',
+//   'Barbora Krejcikova',
+//   'Karolina Pliskova',
+//   'Beatriz Haddad Maia',
+//   'Liudmila Samsonova',
+//   'Victoria Azarenka',
+//   'Qinwen Zheng Vic check',
+//   'Madison Keys',
+//   'Jelena Ostapenko',
+// ];
 
 let attemptsLeft = document.querySelector('.label-score');
 
 const playerPhoto = document.querySelector('.player-photo');
 let numbersPlayed = [];
 let playing = true;
+
+function setPlayerPhoto(playerPhotoLocal, numberToGuessLocal) {
+  playerPhotoLocal.src = `./playerImages/player-${numberToGuessLocal}.png`;
+}
 
 //generate random number
 let generateNumberToGuess = function () {
@@ -53,7 +62,9 @@ const displayMessage = function (message) {
 
 console.log(`numberToGuess: ${numberToGuess}`);
 //connect random number to player image
-playerPhoto.src = `./playerImages/player-${numberToGuess}.png`;
+setPlayerPhoto(playerPhoto, numberToGuess);
+
+//playerPhoto.src = `./playerImages/player-${numberToGuess}.png`;
 attemptsLeft.textContent =
   'Attempts left to guess ' +
   players[`${numberToGuess}` - 1] +
@@ -111,7 +122,8 @@ document.querySelector('.check').addEventListener('click', function () {
           players[`${numberToGuess}` - 1] +
           "'s ranking: " +
           score;
-        playerPhoto.src = `./playerImages/player-${numberToGuess}.png`;
+        setPlayerPhoto(playerPhoto, numberToGuess);
+        //playerPhoto.src = `./playerImages/player-${numberToGuess}.png`;
         console.log(`numbers played: ${numbersPlayed}`);
         console.log(`new numberToGuess: ${numberToGuess}`);
       }
