@@ -2,6 +2,9 @@
 
 A game where a user must successfully guess the rank of all top 20 female tennis players.
 
+Deployed using Netlify: 
+[Play Now!](https://main--animated-pixie-528dc3.netlify.app/)
+
 ## Table of contents
 
 -  🤷🏼‍♀️ [How to Play](#how-to)
