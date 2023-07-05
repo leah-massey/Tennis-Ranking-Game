@@ -1,37 +1,9 @@
 'use strict';
 
 import { retrievePlayers } from './playersRepository.mjs';
-retrievePlayers = require;
 
 let players = retrievePlayers();
-
-//const players = require('./players');
-
-// const players = [
-//   'Iga Swiatek',
-//   'Aryna Sabalenka',
-//   'Jessica Pegula',
-//   'Elena Rybankina',
-//   'Caroline Garcia',
-//   'Coco Gauf',
-//   'Ons Jabeur',
-//   'Maria Sakkari',
-//   'Daria Kasatkina',
-//   'Petra Kvitova',
-//   'Belinda Bencic',
-//   'Veronika Kudermetova',
-//   'Barbora Krejcikova',
-//   'Karolina Pliskova',
-//   'Beatriz Haddad Maia',
-//   'Liudmila Samsonova',
-//   'Victoria Azarenka',
-//   'Qinwen Zheng Vic check',
-//   'Madison Keys',
-//   'Jelena Ostapenko',
-// ];
-
 let attemptsLeft = document.querySelector('.label-score');
-
 const playerPhoto = document.querySelector('.player-photo');
 let numbersPlayed = [];
 let playing = true;
@@ -136,13 +108,13 @@ document.querySelector('.again').addEventListener('click', function () {
   if (playing) {
     score = 10;
     document.querySelector('.guess').value = '';
-    secretNumber = generateNumberToGuess();
+    let secretNumber = generateNumberToGuess();
     attemptsLeft.textContent =
       'Attempts left to guess ' +
       players[`${secretNumber}` - 1] +
       "'s ranking: " +
       score;
-    player.src = `./playerImages/player-${secretNumber}.png`;
+    playerPhoto.src = `./playerImages/player-${secretNumber}.png`;
     console.log(`numbers played: ${numbersPlayed}`);
     console.log(`new secretNumber: ${secretNumber}`);
     displayMessage('Start guessing... 🤞🏻');
